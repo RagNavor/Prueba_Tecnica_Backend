@@ -21,7 +21,7 @@ class UserSerializer(serializers.Serializer):
         new_user = User()
         new_user.first_name:str = validated_data.get('first_name')
         new_user.last_name:str = validated_data.get('last_name')
-        new_user.username = new_user.first_name[0] + new_user.last_name
+        new_user.username = validated_data.get('email')
         new_user.email = validated_data.get('email')
         new_user.set_password(validated_data.get('password'))
         new_user.save()

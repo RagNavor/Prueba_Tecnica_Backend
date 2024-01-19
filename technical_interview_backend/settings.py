@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['localhost']
 
 INSTALLED_APPS = [
     'user_api.apps.UserApiConfig',
+    'etl_api.apps.EtlApiConfig',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',

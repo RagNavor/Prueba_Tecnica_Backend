@@ -1,4 +1,4 @@
-from rest_framework.authentication import TokenAuthentication
+'''from rest_framework.authentication import TokenAuthentication
 from rest_framework.exceptions import AuthenticationFailed
 from datetime import timedelta
 from django.utils import timezone
@@ -32,4 +32,4 @@ class ExpiringTokenAuthentication(TokenAuthentication):
         if is_expired:
             raise AuthenticationFailed('Token expirado')
         
-        return (token.user, token)
+        return (token.user, token)'''

@@ -17,6 +17,7 @@ class UserApi(APIView):
             if serializer.validate_username(request.data['email']):
                 user = serializer.save()
                 return Response(serializer.data, status= status.HTTP_201_CREATED)
+            return Response({'message':'Usuario ya existe'}, status=status.HTTP_409_CONFLICT)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
